@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Surprise 💌</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: pink; color: darkred; }
+    h1 { font-size: 2.5em; margin-top: 20px; }
+    .message {
+      display: none;
+      font-size: 1.2em;
+      margin: 20px;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+    .message.show { display: block; opacity: 1; }
+    video { width: 80%; border-radius: 15px; margin-top: 20px; box-shadow: 0 0 25px red; }
+    button { background: red; color: white; padding: 10px 20px; border: none; border-radius: 10px; font-size: 1.2em; cursor: pointer; margin-top: 20px; }
+    button:hover { background: darkred; }
+  </style>
+</head>
+<body>
+  <h1>💖 My Forever Valentine 💖</h1>
+
+  <button onclick="document.getElementById('loveMessage').classList.add('show')">
+    Reveal Our Love Story 💌
+  </button>
+
+  <div id="loveMessage" class="message">
+    <p>
+      My love, from the very first moment we met, my heart knew it had found its home.  
+      Through every laugh, every challenge, and every quiet moment, you have been my strength, my joy, and my safe place.  
+      Together we’ve built a bond that is unshakable — one of love, support, and endless devotion.  
+      I promise to stand by you in every season of life, to lift you when you are weary, to celebrate you when you shine, and to hold you close when the world feels heavy.  
+      You are not just my partner, you are my forever, my best friend, and my soulmate.  
+      No matter where life takes us, I will love you endlessly, faithfully, and without condition.  
+      Today, tomorrow, and for all the days to come, you are my Valentine, my heart, and my forever love.  
+    </p>
+    <video controls>
+      <source src="surprise.mp4" type="video/mp4">
+    </video>
+  </div>
+</body>
+</html>
