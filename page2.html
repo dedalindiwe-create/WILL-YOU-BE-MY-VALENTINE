@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine’s Day ❤️</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: pink; color: darkred; }
+    h1 { font-size: 2.5em; margin-top: 20px; }
+    #countdown { font-size: 1.5em; margin: 20px; font-weight: bold; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px; }
+    .gallery img, .gallery video { width: 100%; border-radius: 15px; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+    .gallery img:hover, .gallery video:hover { transform: scale(1.05); box-shadow: 0 0 15px red; }
+    button { background: red; color: white; padding: 10px 20px; border: none; border-radius: 10px; font-size: 1.2em; cursor: pointer; margin-top: 20px; }
+    button:hover { background: darkred; }
+  </style>
+</head>
+<body>
+  <h1>Happy Valentine’s Day, My Love 💕</h1>
+  <p>You make my world brighter every day.</p>
+
+  <!-- Music Player -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qeR20-Qq1YI?autoplay=1"
+  title="Eyes Blue x Heather" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- Countdown -->
+  <div id="countdown"></div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Memory 1">
+    <img src="photo2.jpg" alt="Memory 2">
+    <video controls>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Surprise Button -->
+  <button onclick="window.location.href='page3.html'">Click for a surprise 💌</button>
+
+  <script>
+    const targetDate = new Date("Feb 14, 2026 00:00:00").getTime();
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000*60*60*24));
+      document.getElementById("countdown").innerHTML = days + " days left 💖";
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Happy Valentine’s Day! 💘";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
